@@ -32,9 +32,23 @@
  - rewriting history: git reflog, git filter-branch, git cherry-pick
  - performence and optimizatiom: Shallow clones, partial clones
  - what is github API
- - undo changes (working directory - local repo - remote repo)      
+
+
+ -    #undo changes (working directory - local repo - remote repo)      
          command(git checkout --<fileName>)    (undo from unstaging)
-                 git reset HEAD . (staging area undo)
-                 git reset --hard HEAD (undo from staging and unstaging)
-                 git commit --amend (correcting the commit message and add new fill)
-                 git revert HEAD (UNDO a letest commit)
+                - git reset HEAD . (staging area undo)
+                - git reset --hard HEAD (undo from staging and unstaging)
+
+                                 commit message changes
+                - git commit --amend (correcting the commit message and add new fill)
+
+                                 commit delete local
+                - git revert HEAD (UNDO a letest commit)
+
+
+                                     push commit undo from remote repo
+
+                - git revert,id + git push (reverting a push commit) recommended added commit history.
+                - git reset --hard, id + git push --force (force pushing to undo a commit) history hide its dangerous.not recommanded but workfull.
+
+
